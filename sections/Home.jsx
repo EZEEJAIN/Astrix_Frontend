@@ -29,24 +29,33 @@ const Homee = () => {
     },
   ];
   return (
-    <div
-      className="flex-col justify-start items-start"
-      // style={{
-      //   background: "url('/ViewBG.svg')",
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "repeat",
-      // }}
-    >
+    <div className="flex-col justify-start items-start relative">
       <Navbar />
-      <div className="flex justify-start items-center space-x-3 py-10 ">
-      {cardItems.map((elem, index) => (
+      <div className="px-8 absolute top-24">
+        <p className="text-8xl font-bold text-slate-200 opacity-75 -z-20">
+          ASTR
+        </p>
+        <p className="text-8xl font-bold text-slate-200 opacity-75 mb-16">
+          IX
+        </p>
+        <p className="text-8xl font-bold text-slate-200 opacity-75">
+          COLL
+        </p>
+        <p className="text-8xl font-bold text-slate-200 opacity-75">
+          ECTI
+        </p>
+        <p className="text-8xl font-bold text-slate-200 opacity-75">
+          BLE
+        </p>
+      </div>
+      <div className="flex justify-between items-center space-x-3 py-10 ml-52">
+        {cardItems.map((elem, index) => (
         <HomeCard
           key={index}
           image={elem.image}
           name={elem.name}
           nickname={elem.nickname}
         />
-
       ))}
       </div>
     </div>
